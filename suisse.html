@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configuration de base du document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="css/suisse.css">
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="js/suisse.js"></script>
+
+    <!-- Titre de la page (visible dans l’onglet du navigateur) -->
+    <title>Suisse</title>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <!-- Nom de la banque -->
+        <h1>Suisse-Wallet Bank</h1>
+
+        <!-- Menu de navigation -->
+        <nav>
+            <!-- Liens internes vers les sections -->
+            <a href="#Courant">Courant</a>
+            <a href="#Epargne">Epargne</a>
+            <a href="#Assurance">Assurance</a>
+        </nav>
+
+        <!-- Bouton pour activer le mode sombre -->
+        <button id="dark">Switch Theme</button>
+    </header>
+
+    <!-- ================= CONTENU PRINCIPAL ================= -->
+    <main>
+
+        <!-- Section du compte courant -->
+        <section id="Courant">
+
+            <!-- Message de bienvenue -->
+            <p>Bonjour et Bienvenue dans votre compte Courant</p>
+
+            <!-- Bloc contenant le solde et les actions -->
+            <div class="solde">
+
+                <!-- Affichage du solde actuel -->
+                <p>
+                    Affichage du compte en solde :
+                    <span id="solde-affiche">5000</span> CHF
+                </p>
+
+                <!-- Champ pour entrer le montant à ajouter ou retirer -->
+                <input type="number" id="Choix-retrait" name="Choix-retrait">
+
+                <!-- Bouton pour retirer de l'argent -->
+                <button id="Retirer">Retirer</button>
+
+                <!-- Bouton pour ajouter de l'argent -->
+                <button id="Ajout">Ajouter</button>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        © Suisse-Wallet Bank 2026. KARANJA Mark 
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* ================= VARIABLES GLOBALES ================= */
+:root{
+    /* Couleur de fond principale */
+    --background-color: red;
+
+    /* Couleur du texte */
+    --color: #E0E0E0;
+}
+
+/* ================= MODE SOMBRE ================= */
+body.dark {
+
+    /* Nouvelle couleur de fond quand le mode sombre est activé */
+    --background-color: #222;
+
+    /* Nouvelle couleur du texte */
+    --color: #eee;
+
+    /* Couleur des sections en mode sombre */
+    --section: #555;
+}
+
+/* ================= RESET CSS ================= */
+/* Supprime les marges et paddings par défaut du navigateur */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Inclut padding et border dans la taille totale */
+}
+
+/* ================= HEADER ================= */
+header{
+
+    /* Organisation en ligne */
+    display: flex;
+
+    /* Espace entre les éléments */
+    justify-content: space-between;
+
+    /* Alignement vertical centré */
+    align-items: center;
+
+    /* Couleur de fond dynamique (change avec le dark mode) */
+    background-color: var(--background-color);
+
+    padding: 7px;
+}
+
+/* ================= NAVIGATION ================= */
+nav a{
+
+    /* Supprime le soulignement des liens */
+    text-decoration: none;
+
+    /* Animation douce lors du hover */
+    transition: transform 1.3s;
+
+    margin: 15px;
+}
+
+/* Effet au survol des liens */
+nav a:hover{
+    color: white;
+    transform: scale(1.05); /* Agrandissement léger */
+}
+
+/* ================= MAIN ================= */
+main{
+    margin: 20px;
+    padding: 10px;
+
+    /* Couleur de fond de la zone principale */
+    background-color: var(--color);
+}
+
+/* ================= BOUTONS ================= */
+button:hover{
+    transform: scale(1.05); /* Effet zoom au survol */
+}
+
+/* ================= INPUT ================= */
+input {
+
+    /* Espace au-dessus */
+    margin-top: 10px;
+
+    /* Espace intérieur */
+    padding: 5px;
+
+    /* Bordure visible */
+    border: 2px solid black;
+}
