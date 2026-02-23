@@ -36,16 +36,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // -----------------------
     function Ajouter(nbr){
 
+        // le montant maximum que l'on peut ajouter
+        let soldeMax = 10000;
         // On récupère le solde actuel
         let soldeActuel = Number(solde.textContent);
 
         // Vérifie si le montant est invalide
         if (isNaN(nbr) || nbr <= 0){
-            return "Erreur : montant invalide";
+            alert ("Erreur : montant invalide");
+            return;
         }
-
-        // On ajoute le montant au solde
-        solde.textContent = soldeActuel + nbr;
+        
+        if (soldeActuel + nbr < soldeMax) {
+            // Le montant que l'on veut ajouter
+            solde.textContent = soldeActuel + nbr
+        } else {
+            //Le montant maximum etant depasser l'argent ne peut pas être ajouter
+            alert("Action impossible : le plafond de 10 000€ serait dépassé !");
+            return;
+        }
 
         return "Ajout réussi";
     }
@@ -70,9 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // -----------------------
     boutonAjouter.addEventListener("click", () => {
 
-        let montant = Number(input.value);
-        let message = Ajouter(montant);
-        alert(message);
+    Ajouter(Number(input.value)); 
+    input.value = "";
+
     });
 
     // -----------------------
@@ -86,5 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Cela change les couleurs grâce au CSS
         document.body.classList.toggle('dark');
     });
+
+
 
 });
